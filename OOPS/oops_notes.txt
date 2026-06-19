@@ -1,0 +1,36 @@
+object bundle of related attribute and methods - object has attributes, like a phone's version, color etc, and method is its capability. Methods are functions that belong to an object.
+
+Classes are used to design an object (blueprint), class is needed to create many objects.
+
+Class (The Blueprint): An abstract template that defines what characteristics (attributes/data) and actions (methods/functions) a certain type of item will have. It does not occupy memory space for actual data.Object (The Real Thing): The actual physical presence built from that template. It occupies memory space and contains real values. //object is an instance of a class
+
+
+Class = Struct, Objects = array of structs
+
+To construct an object, we need a special method called the constructor.
+
+for ex, to create an object, 
+class Car: ------> //this is our class, the **blueprint**
+   def __init__(self, model, year, color, for_sale): //we need this method (called the constructor), self refers to the object we are currently working with
+	self.model = model
+	self.year = year
+	self.color = color
+	self.for_sale = for_sale 
+
+//now making an object
+car1 = Car("Mustang", 1998, "red", false) //car1 is the object name
+print(car1.object)
+print(car1.year) etc
+
+we can have more methods in a class like: 
+class Car:
+   def __init__(self, model, year, color, for_sale): 
+	self.model = model
+	self.year = year
+	self.color = color
+	self.for_sale = for_sale 
+
+	def drive(self):
+		print(f"You are driving {self.model}")
+	def stop(self):
+		print(f"You stopped {self.model}")
