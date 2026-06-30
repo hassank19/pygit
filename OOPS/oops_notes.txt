@@ -34,3 +34,45 @@ class Car:
 		print(f"You are driving {self.model}")
 	def stop(self):
 		print(f"You stopped {self.model}")
+
+Instance variables vs Class variables, instance variables are defined inside of a constructor like:
+   def __init__(self, model, year, color, for_sale): 
+	self.model = model
+	self.year = year
+whereas,
+Class variables are shared among all instances (objects) of a class, -->They are defined outside the constructor
+Instance variables = Changes as instances, Class variables = shared by all objects of that class (common for all instances)
+
+Class variables are accessed using the class' name, ex:
+car1.name //for instance variables
+Car.num --> Car is name of class
+
+-------Inheritance in OOPs--------
+Inheritance allows a class to inherit methods and attributes from another class
+class parent(self, name):
+	self.name = name
+
+	def species(self):
+		print("Human")
+	
+class child(parent):
+	pass
+
+child1 = child("Alex")
+child1.species() --->prints Human, it inherited from parent class
+#-> refer to Inheritance.py
+
+---------Multiple Inheritance----------
+Inherit from more than one parent
+_______________________________________
+Abstract classes, a class that cannot be instantiated on its own, it is meant to be subclassed #supposed to have children
+Cant create an object from an abstract class
+They have abstract methods whhich r declared but have no implementation
+It has abstract methods supposed to be inherited by the children
+
+The methods of the abstract class are defined or implemented in the child classes, 
+without defining them we cannot make objects from the child classes
+_______________________________________
+Aggregation = It means two objects that have a 'has a' relationship, ex: A library has a book
+Composition = It means two objects have a relationship where one owns the another
+_______________________________________
